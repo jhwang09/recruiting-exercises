@@ -2,14 +2,15 @@ import { Map, fromJS } from 'immutable';
 import { InventoryAllocator } from "./inventoryAllocator";
 
 class Startup {
+    
     public static main(): number {
-        let orderedItems = this.validateAndBootstrapOrderedItems({ 
+        let orderedItems = fromJS({ 
             "apple": 5, 
             "banana": 5, 
             "orange": 5 
         });
 
-        let warehouseMap = this.validateAndBootstrapWarehouseMap({ 
+        let warehouseMap = fromJS({ 
             "a": { "apple": 3 }, 
             "b": { "apple": 3 },
             "c": { "banana": 5 },
@@ -27,13 +28,6 @@ class Startup {
         return 0;
     }
 
-    private static validateAndBootstrapOrderedItems(data: Object): Map<string, number> {
-        return fromJS(data);
-    }
-
-    private static validateAndBootstrapWarehouseMap(data: Object): Map<string, Map<string, number>> {
-        return fromJS(data);
-    }
 }
 
 Startup.main();
