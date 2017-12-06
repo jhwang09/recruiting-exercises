@@ -4,7 +4,6 @@ import { Map, Set } from 'immutable';
  * InventoryAllocator
  */
 export class InventoryAllocator {
-
     /**
      * Calculate and return all possible shipment configurations
      * 
@@ -15,7 +14,6 @@ export class InventoryAllocator {
         orderedItems: Map<string, number>, 
         warehouseMap: Map<string, Map<string, number>>
     ): Map<string, Map<string, number>>[] {
-
         if (!orderedItems || !warehouseMap || orderedItems.isEmpty() || warehouseMap.isEmpty()) {
             return []; 
         }
@@ -39,7 +37,6 @@ export class InventoryAllocator {
         remainWarehouseMap: Map<string, Map<string, number>>,
         allocationMap: Map<string, Map<string, number>>
     ): Set<Map<string, Map<string, number>>> {
-
         // looping through non-allocated ordered items and try to allocate 
         // items from current warehouse
         remainOrderedItems.entrySeq().forEach(([item, qty]) => {
@@ -98,5 +95,4 @@ export class InventoryAllocator {
         warehouseAllocation = warehouseAllocation.set(item, count);
         return allocationMap.set(warehouseName, warehouseAllocation);
     }
-
 }

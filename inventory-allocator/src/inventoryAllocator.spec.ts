@@ -15,12 +15,28 @@ describe('InventoryAllocator', () => {
         w1: { apple: 30, banana: 1, cherry: 33 }, 
         w2: { apple: 40, banana: 50 },
         w3: { apple: 5, banana: 33, milk: 10, cherry: 99 },
-        w4: { apple: 30, banana: 22, milk: 99 },
+        w4: { apple: 29 },
         w5: { cherry: 10 },
       })
     );
 
     validateConfigurations(orderedItems, result);
+  });
+
+  it('multiple warehouses, should return empty array', () => {
+    let orderedItems = fromJS({ apple: 100, banana: 50, cherry: 33, milk: 1 });
+    let result = allocator.calculatePossibleShipments(
+      orderedItems, 
+      fromJS({ 
+        w1: { apple: 30, banana: 1, cherry: 33 }, 
+        w2: { apple: 40, banana: 50 },
+        w3: { apple: 5, banana: 33, milk: 0, cherry: 99 },
+        w4: { apple: 30, banana: 22, milk: 0 },
+        w5: { cherry: 10 },
+      })
+    );
+
+    assert.lengthOf(result, 0);
   });
 
   it('two warehouses, match and has more, should return 2 configurations', () => {
@@ -118,6 +134,8 @@ function validateConfigurations(
   orderedItems: Map<string, number>, 
   results: Map<string, Map<string, number>>[]
 ) {
+  assert.notEqual(results.length, 0, "no configuration found");
+
   results.map((configuration) => {
     let actualMap = Map<string, number>();
     configuration.valueSeq().forEach((itemMap) => {
