@@ -1,4 +1,17 @@
+## Overview
+I decided to work on this problem with Typescript + Node.JS as a way to learn new technologies. This is the first time I worked with static typing JavaScript, where it does take JS maintainability and testability to another level. This has been a great first-time learning experience on the tooling such as TypeScript, Mocha and Chai.
 
+## Useful Resources
+1. https://basarat.gitbooks.io/typescript/docs/quick/nodejs.html
+2. https://www.typescriptlang.org/docs/home.html
+3. https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md
+4. https://facebook.github.io/immutable-js/
+5. https://journal.artfuldev.com/unit-testing-node-applications-with-typescript-using-mocha-and-chai-384ef05f32b2
+6. http://usejsdoc.org/tags-param.html
+7. https://mochajs.org/
+8. http://chaijs.com/
+
+## Origainl Problem Statement
 
 ### Problem
 
@@ -43,3 +56,4 @@ We'll evaluate your code via the following guidelines in no particular order:
 2. **Correctness**: is the solution correct and does it solve the problem
 1. **Test Code Quality**: Is the test code comperehensive and covering all cases.
 1. **Tool/Language mastery**: is the code using up to date syntax and techniques. 
+

@@ -1,0 +1,25 @@
+{
+  "name": "inventory-allocator",
+  "version": "1.0.0",
+  "description": "Inventory allocator is a class that computes all possible shipments given a particular inventory distribution. The way we would use the output is take each shipment configuration and estimate how much it costs and pick the optimal one.",
+  "main": "lib/index",
+  "types": "lib/index",
+  "scripts": {
+    "dev": "tsc && node ./lib",
+    "test": "mocha -r ts-node/register src/**/*.spec.ts"
+  },
+  "keywords": [],
+  "author": "Jerome Hwang",
+  "devDependencies": {
+    "@types/chai": "^4.0.8",
+    "@types/mocha": "^2.2.44",
+    "@types/node": "^8.0.54",
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "immutable": "^3.8.2"
+  }
+}
