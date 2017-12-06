@@ -1,5 +1,31 @@
 ## Overview
-I decided to work on this problem with Typescript + Node.JS as a way to learn new technologies. This is the first time I worked with static typing JavaScript, where it does take JS maintainability and testability to another level. This has been a great first-time learning experience on the tooling such as TypeScript, Mocha and Chai.
+I decided to work on this problem with Typescript + Node.JS as a way to learn new technologies. Working with Typescript has been interesting and it does show me a different way of working with JavaScript.
+
+## Prerequisites
+1. Install node
+
+## Steps to Run
+1. Checkout the code
+```
+git clone https://github.com/jhwang09/recruiting-exercises
+```
+2. Change directory to 
+```
+cd ./recruiting-exercises/inventory-allocator
+```
+3. Install all dependencies
+```
+npm install
+```
+4. Run the code
+```
+npm run dev
+```
+
+### Run tests
+```
+npm run test
+```
 
 ## Useful Resources
 1. https://basarat.gitbooks.io/typescript/docs/quick/nodejs.html
